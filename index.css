@@ -3,32 +3,123 @@
     padding: 0px;
 }
 #container{
-    background-color: aqua;
+    background-color:#14213D;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200vh;
+    height: 129vh;
+   
     
 }
- 
-.div{
+
+.div{ 
     height:20px;
     width: 20px;
     margin-bottom:-5px;
     display: inline-block;
-    background-color: red;
+    background-color:  #FCA311;;
     cursor: pointer;
 
 }
+body{
+    background-color: #14213D;
+}
 #button_container{
+    position: sticky;
+    top: 0px;
+    background-color: #14213D;
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-around;
-    background-color: red;
+    justify-content: space-evenly;
+    
 }
 
 #button_container>button{
+    animation: slide1 1s  1 ;
     height: 50px;
     width: 500px;
+}
+
+
+#button_container>button{
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+#button_container>button:hover,
+#button_container>button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#button_container>button:hover {
+  transform: translateY(-1px);
+}
+
+#button_container>button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+@keyframes slide1{
+    0%   {margin-top: -100%;}
+    100%{margin-top: 0%;}
+  }
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+::-webkit-scrollbar-thumb{
+    background-color: #5d6066;
+    height: 10em;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #797b7e;
+    height: 1px;
+    border-radius:50px ;
+}
+
+#github_container{
+    animation: slide1 1s  1 ;
+}
+#arrow{
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    margin-left:16.8em ;
+    margin-bottom: 5em;
+}
+html{
+    scroll-behavior: smooth;
 }

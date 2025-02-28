@@ -1,1 +1,16 @@
-﻿in this project you can create a grid based upon the values you input while it may be near completion its yet to be finished! there will be a second version as for now i will be working on a v.2 branch and if things go as planned i should be able to merge by tomorrow. thanks for reading.
+﻿# Etch-a-Sketch Project
+
+This is a simple Etch-a-Sketch project built using **HTML**, **CSS**, and **JavaScript**. The project allows users to draw on a grid by moving the mouse over it, mimicking the functionality of the classic Etch-a-Sketch toy.
+
+## Features
+
+- Draw on a grid with mouse movements
+- Reset the grid with a button
+- Customize the grid size
+
+## Tech Stack
+
+- **HTML** - For creating the basic structure of the app
+- **CSS** - For styling the grid and buttons
+- **JavaScript** - For handling the drawing functionality and user interactions
+

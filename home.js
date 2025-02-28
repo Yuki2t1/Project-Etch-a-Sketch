@@ -1,43 +1,72 @@
-let container=document.querySelector("#container")
-let button=document.createElement("button")
-let button1=document.createElement("button")
-button.textContent="CHOOSE GRID SIZE"
-button.setAttribute("id","btn1")
-document.body.appendChild(button)
-button1.setAttribute("id","btn2")
-document.body.appendChild(button1)
-button1.textContent="Reset"
+let container=document.querySelector("#divs_container")
+let columns=document.querySelector("#columns")
+let button1=document.getElementById("btn1")
+container.setAttribute("id","container")
+columns.setAttribute("id","columns")
 
 
-function grid(){
-    let x=prompt("Give ME A SIZE FOR THE GRID MR.S OR MS.SIGMA (need to be lower then 100).")
-    if(x>100){
-        x=0
-        alert("GIVE A NUMBER NUMBER THAN 100.")
-    }else if(x===""||x===" "||x<1){
-        x=0
-        alert("GIVE ME A NUMBER BIGGER THAN ONE OR NOTHING.")
-    }else if(isNaN(x)){
-        x=0 
-        alert("WORD ARE NOT ACCEPTABLE.")
+
+
+function play_16x16(){
+    let counter=0
+    while (counter!=16){
+        let br=document.createElement("br")    
+        for(let i=0;i<16;i++){
+            let div=document.createElement("div")
+            div.addEventListener("mouseover",()=>{
+                div.style.backgroundColor="gray"
+            })
+            div.classList.add("div");
+            columns.appendChild(div) 
+            }counter+=1
+        
+        columns.appendChild(br)
+
     }
-    container.innerHTML=""
-    
-    for(i=0;i<x*x;i++){    
-        let row = document.createElement("div");
-        row.classList.add("div1"); 
-        container.appendChild(row);  
-        
-        }
-        
+
 }
 
 
-button.addEventListener("click",grid)
-
-button1.addEventListener("click",()=>{
-    container.innerHTML=""
+function play_32x32(){
+    let counter=0
+    while (counter!=32){
+        let br=document.createElement("br")    
+        for(let i=0;i<32;i++){
+            let div=document.createElement("div")
+            div.addEventListener("mouseover",()=>{
+                div.style.backgroundColor="gray"
+            })
+            div.classList.add("div");
+            columns.appendChild(div)
+            
+            }counter+=1
         
-})
+        columns.appendChild(br)
 
+    }
 
+}
+
+function play_64x64(){
+    let counter=0
+    while (counter!=64){
+        let br=document.createElement("br")    
+        for(let i=0;i<64;i++){
+            let div=document.createElement("div")
+            div.addEventListener("mouseover",()=>{
+                div.style.backgroundColor="gray"
+            })
+            div.classList.add("div");
+            columns.appendChild(div)
+            
+            }counter+=1
+        
+        columns.appendChild(br)
+
+    }
+
+}
+
+function reset(){
+    container.innerHTML=""
+}
